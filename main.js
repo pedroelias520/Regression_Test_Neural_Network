@@ -89,6 +89,9 @@ function createWindow () {
     addProduts.show()
   })
 
-  ipcMain.on('ToText',()=>{
-    
+  ipcMain.on('ToText',(problems,pendencys, soluctions)=>{
+      let text = 
+      {"Problemas" : problems, "Pendências": pendencys, "Soluções": soluctions}
+      navigator.clipboard.writeText(text)
+      alert("Texto Copiado")      
   })

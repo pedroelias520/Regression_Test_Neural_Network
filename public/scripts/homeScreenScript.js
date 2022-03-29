@@ -7,6 +7,12 @@ const modeSwitch = body.querySelector(".toggle-switch");
 const modeText = body.querySelector(".mode-text");
 const logOutButton = body.querySelector(".logout");
 const Products = body.querySelector(".products");
+const clearButton = body.querySelector(".clear");
+const copyButton = body.querySelector(".confirm");
+const textAreas = document.getElementsByClassName("text_input")
+const soluctionsArea = body.querySelector(".soluctions");
+const pendencysArea = body.querySelector(".pendencys");
+const problemsArea = body.querySelector(".problems");
 
 
 modeSwitch.addEventListener("click", ()=> {
@@ -29,4 +35,15 @@ logOutButton.addEventListener("click", ()=>{
 
 Products.addEventListener("click", ()=>{
     ipcRenderer.send('Products')
+})
+
+clearButton.addEventListener("click",()=>{
+    for(var i=0;i<textAreas.length;i++){
+        textAreas[i].value = ""
+    }
+})
+
+copyButton.addEventListener("click",()=>{
+    ipcRenderer.send("ToText", problemsArea.value, pendencysArea.value, soluctionsArea.value)
+    console.log("Clicado")
 })
