@@ -1,0 +1,28 @@
+{
+  "name": "electronexampleapp",
+  "version": "0.0.1",
+  "description": "A example app created in Electron framework",
+  "main": "main.js",
+  "scripts": {
+    "test": "cls",
+    "watch": "nodemon --exec electron .",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedroelias520/ElectronExampleApp.git"
+  },
+  "author": "MacZodiac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedroelias520/ElectronExampleApp/issues"
+  },
+  "homepage": "https://github.com/pedroelias520/ElectronExampleApp#readme",
+  "devDependencies": {
+    "electron": "^17.0.0"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3",
+    "nodemon": "^2.0.15"
+  }
+}
